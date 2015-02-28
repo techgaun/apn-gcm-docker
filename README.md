@@ -6,7 +6,7 @@ This repo consists of Dockerfiles for [APNS](https://gist.githubusercontent.com/
 ### [APNS](https://gist.githubusercontent.com/rahuloak/4949381/raw/server.js)
 ```shell
 $ docker pull techgaun/apns
-$ docker run -d -t techgaun/apns
+$ docker run -d -p 7777:7777 -t techgaun/apns
 
 ```
 
@@ -19,7 +19,7 @@ $ docker run --rm -t techgaun/gcm  #runs cottonballs -h by default
 To run a gcm mock on port 7777 with failure ratio of 0.3 and latency 50 seconds,
 
 ```shell
-$ docker run --rm --t techgaun/gcm -f 0.3 -l 50 -p 7777
+$ docker run -p 443:443 -p 7777:7777 --rm --t techgaun/gcm -f 0.3 -l 50 -p 7777
 ```
 
 ### Mention
